@@ -16,3 +16,7 @@
 !apt-get install -y openbabel libopenbabel-dev
 !pip install openbabel-wheel
 !pip install meeko rdkit-pypi
+
+!pip install -q molgrid gninatorch pytorch-ignite
+
+!pip install mlflow
