@@ -4,9 +4,6 @@
 
 ## Import Libraries
 """
-# from google.colab import drive
-# drive.mount('/content/drive')
-
 import os
 import re
 import shutil
