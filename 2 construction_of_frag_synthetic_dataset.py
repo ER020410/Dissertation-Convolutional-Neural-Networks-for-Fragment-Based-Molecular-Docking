@@ -2,9 +2,6 @@
 
 # Import
 """
-# from google.colab import drive
-# drive.mount('/content/drive')
-
 from rdkit import Chem
 from rdkit.Chem import AllChem
 from rdkit.Chem import rdmolfiles
