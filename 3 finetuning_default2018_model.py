@@ -2,9 +2,6 @@
 
 # Import
 """
-# from google.colab import drive
-# drive.mount('/content/drive')
-
 from collections import defaultdict
 import random
 import os, re
