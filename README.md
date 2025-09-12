@@ -20,3 +20,11 @@
 !pip install -q molgrid gninatorch pytorch-ignite
 
 !pip install mlflow
+
+# Dataset
+LEADS_FRAG Dataset: https://pubs.acs.org/doi/10.1021/acs.jcim.0c00693
+LEADS-FRAG: A Benchmark Data Set for Assessment of Fragment Docking Performance
+Laura Chachulski and Björn Windshügel
+Journal of Chemical Information and Modeling 2020 60 (12), 6544-6554
+DOI: 10.1021/acs.jcim.0c00693
+
