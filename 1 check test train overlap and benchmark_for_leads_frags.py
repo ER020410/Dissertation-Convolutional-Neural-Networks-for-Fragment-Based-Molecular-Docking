@@ -33,7 +33,6 @@ import csv
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from scipy.stats import pearsonr
 from rmsd_utils import robust_rmsd
 
 from sklearn.metrics import roc_curve, auc
