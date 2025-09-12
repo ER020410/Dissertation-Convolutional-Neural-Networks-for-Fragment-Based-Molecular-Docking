@@ -194,7 +194,7 @@ preds, labels = get_predictions_gnina_pose(model, types_file, data_root=data_roo
 
 rmse = np.sqrt(np.mean((labels-preds)**2))
 corr = pearsonr(preds, labels)[0]
-print(f'Performance default2018 on {data_name} - RMSE: {rmse:.3f}, Pearson: {corr:.3f}')
+print(f'Performance default2018 on {data_name} - RMSE: {rmse:.3f}')
 
 """# Redocking and Rescoring"""
 
