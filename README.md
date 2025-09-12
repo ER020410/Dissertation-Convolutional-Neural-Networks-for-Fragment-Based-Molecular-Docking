@@ -22,7 +22,10 @@
 !pip install mlflow
 
 # Dataset
-LEADS_FRAG Dataset: https://pubs.acs.org/doi/10.1021/acs.jcim.0c00693
+1. _LEADS_FRAG_ Dataset: https://pubs.acs.org/doi/10.1021/acs.jcim.0c00693
 
 Citetation: LEADS-FRAG: A Benchmark Data Set for Assessment of Fragment Docking Performance, Laura Chachulski and Björn Windshügel, Journal of Chemical Information and Modeling 2020 60 (12), 6544-6554, DOI: 10.1021/acs.jcim.0c00693
 
+2. Refined _PDBBind v2016_ Dataset: https://github.com/gnina/models/tree/master/data/PDBBind2016 
+
+File Names: ref_uff_train0.types, 
