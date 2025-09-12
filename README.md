@@ -55,15 +55,27 @@ This repository contains four main Python scripts used in the dissertation workf
 
 ## Models and Utilities
 
-### Model Checkpoints
+### Initial Model 
 - **`crossdock_default2018.pt`**  
   The baseline **default2018** CNN model trained on the _CrossDocked2020_ dataset, used as the model for benchmarking and the starting point for fine-tuning.
 
-- **`checkpoint_800_B.pt`**  
-- **`checkpoint_900_A.pt`**  
-- **`checkpoint_900_C.pt`**  
-  Fine-tuned CNN model checkpoints obtained from different training runs on the synthetic fragment dataset.  
-  The suffix (`A`, `B`, `C`) denotes different fine-tuning strategies (freezing layers).
+### Fine-Tuned Model Variants
+
+The fine-tuned CNN models were trained on the fragment-level dataset with different **layer-freezing strategies** to explore transfer learning performance:
+
+- **Model A (`checkpoint_900_A.pt`)**  
+  - Full fine-tuning: all layers of the default2018 network were unfrozen and updated during training.  
+  - Tends to adapt strongly to training data but may reduce transferability.
+
+- **Model B (`checkpoint_800_B.pt`)**  
+  - Partial fine-tuning: the first **two convolutional units** were frozen, and only deeper layers were updated.  
+  - Balances stability with adaptability, achieving intermediate performance.
+
+- **Model C (`checkpoint_900_C.pt`)**  
+  - Shallow freezing: the first **four convolutional units** were frozen, fine-tuning only higher-level layers.  
+  - Demonstrated the strongest early-ranking ability in pose prediction benchmarks.
+
+These models represent different transfer learning strategies, allowing comparison of generalization and fragment-level docking performance.
 
 ### Python Scripts
 - **`default2018_model.py`**  
