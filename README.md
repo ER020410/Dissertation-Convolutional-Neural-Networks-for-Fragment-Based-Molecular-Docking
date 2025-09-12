@@ -53,3 +53,24 @@ This repository contains four main Python scripts used in the dissertation workf
 4. **`4_test_result_on_leads_frags_no_overlap.py`**  
    Evaluates fine-tuned models on the filtered LEADS-FRAGS dataset, computing pose classification metrics and generating results for analysis.
 
+## Models and Utilities
+
+### Model Checkpoints
+- **`crossdock_default2018.pt`**  
+  The baseline **default2018** CNN model trained on the _CrossDocked2020_ dataset, used as the model for benchmarking and the starting point for fine-tuning.
+
+- **`checkpoint_800_B.pt`**  
+- **`checkpoint_900_A.pt`**  
+- **`checkpoint_900_C.pt`**  
+  Fine-tuned CNN model checkpoints obtained from different training runs on the synthetic fragment dataset.  
+  The suffix (`A`, `B`, `C`) denotes different fine-tuning strategies (freezing layers).
+
+### Python Scripts
+- **`default2018_model.py`**  
+  Defines the architecture of the **default2018** CNN model (GNINA-style 3D convolutional network).
+
+- **`training_finetune.py`**  
+  Modified training script for fine-tuning CNN models on fragment datasets, supporting fine-tuning objectives and checkpoint saving.
+
+- **`rmsd_utils.py`**  
+  Utility functions for RMSD calculation and pose evaluation, used in benchmarking and model assessment.
