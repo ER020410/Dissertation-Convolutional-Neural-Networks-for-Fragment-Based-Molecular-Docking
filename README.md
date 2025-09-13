@@ -1,7 +1,7 @@
 # Dissertation-Convolutional-Neural-Networks-for-Fragment-Based-Molecular-Docking
 
-This repository contains the Jupyter notebooks and results from my MSc dissertation.  
-The project investigates the application of convolutional neural networks (CNNs) for fragment-based molecular docking, focusing on dataset preparation, fine-tuning, and benchmarking.
+This repository contains the code from Yiting Ren's MSc dissertation (P072).  
+The project investigates the application of convolutional neural networks (CNNs) for fragment-based molecular docking, focusing on benchmarking, dataset preparation and fine-tuning.
 
 ## Setup
 !pip install numpy==1.26.4
