@@ -711,7 +711,7 @@ def count_success_top_n(pose_rank, rank_col, n=1):
     success = (pose_rank[rank_col] <= n).sum()
     return success
 
-for n in [1, 3, 5, 10, 15, 20, 25, 30, 34, 35, 36, 37, 38, 39, 40, 45, 49]:
+for n in [1, 3, 5, 10, 15, 20, 25, 30, 34, 35, 36, 37, 38, 39, 40]:
     # print(f'Top {n} success count (smina): {count_success_top_n(pose_rank_no_zero, "smina_first_success", n)}')
     print(f'Top {n} success count (gnina): {count_success_top_n(pose_rank_no_zero, "gnina_first_success", n)}')
 
@@ -1055,7 +1055,7 @@ def count_success_top_n(pose_rank, rank_col, n=1):
     success = (pose_rank[rank_col] <= n).sum()
     return success
 
-for n in [1, 3, 5, 10, 15, 19, 20, 25, 30, 35, 36, 37, 38, 39, 40, 45, 49]:
+for n in [1, 3, 5, 10, 15, 19, 20, 25, 30, 35, 36, 37, 38, 39, 40]:
     # print(f'Top {n} success count (smina): {count_success_top_n(pose_rank_no_zero, "smina_first_success", n)}')
     print(f'Top {n} success count (gnina): {count_success_top_n(pose_rank_no_zero, "gnina_first_success", n)}')
 
@@ -1121,7 +1121,7 @@ pose_rank_C = './crossdock_4block_900_success_pose_ranks.csv'
 pose_rank_C = pd.read_csv(pose_rank_C)
 pose_rank_no_zero_C = pose_rank_C[(pose_rank_C != 0).all(axis=1)].reset_index(drop=True)
 
-top_n_range = list(range(1, 40))
+top_n_range = list(range(1, 41))
 success_rates_smina = []
 success_rates_gnina = []
 success_rates_model_A = []
