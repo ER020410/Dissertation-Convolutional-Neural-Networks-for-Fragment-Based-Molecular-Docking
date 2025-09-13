@@ -792,7 +792,7 @@ pose_rank = pd.read_csv(pose_rank)
 pose_rank_no_zero = pose_rank[(pose_rank != 0).all(axis=1)].reset_index(drop=True)
 
 # visualize
-top_n_range = list(range(1, 40))
+top_n_range = list(range(1, 41))
 success_rates_smina = []
 success_rates_gnina = []
 
