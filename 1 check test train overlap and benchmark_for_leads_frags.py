@@ -563,7 +563,7 @@ combined_mul = pose_scores * affinity_scores
 combined_weighted_sum = w1 * pose_scores + w2 * affinity_scores
 combined_geom_mean = np.sqrt(pose_scores * affinity_scores)
 combined_log_sum = np.exp(w1 * np.log(pose_scores + 1e-8) + w2 * np.log(pose_scores + 1e-8))
-alpha = 0.1
+alpha = 0.6
 combined_pow = np.power(pose_scores, alpha) * np.power(affinity_scores, 1 - alpha)
 
 df_combined_no_overlap = pd.DataFrame({
