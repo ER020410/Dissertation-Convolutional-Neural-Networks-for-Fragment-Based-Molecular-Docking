@@ -1105,6 +1105,10 @@ plt.show()
 
 """# Plot Pose Success Rate"""
 
+pose_rank = '/content/drive/MyDrive/success_pose_ranks_no_overlap.csv'
+pose_rank = pd.read_csv(pose_rank)
+pose_rank_no_zero = pose_rank[(pose_rank != 0).all(axis=1)]
+
 pose_rank_A = './crossdock_0block_900_success_pose_ranks.csv'
 pose_rank_A = pd.read_csv(pose_rank_A)
 pose_rank_no_zero_A = pose_rank_A[(pose_rank_A != 0).all(axis=1)].reset_index(drop=True)
@@ -1142,7 +1146,7 @@ plt.figure(figsize=(10, 6))
 
 plt.plot(top_n_range, success_rates_smina, label='SMINA', marker='o')
 plt.plot(top_n_range, success_rates_gnina, label='GNINA', marker='s')
-plt.plot(top_n_range, success_rates_model_A, label='Model A', marker='^', color = 'salmon')
+plt.plot(top_n_range, success_rates_model_A, label='Model A', marker='^', color = 'purple')
 plt.plot(top_n_range, success_rates_model_B, label='Model B', marker='v', color = 'green')
 plt.plot(top_n_range, success_rates_model_C, label='Model C', marker='D', color = 'red')
 
